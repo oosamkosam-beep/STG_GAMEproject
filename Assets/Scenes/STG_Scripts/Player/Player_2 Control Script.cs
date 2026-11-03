@@ -183,10 +183,10 @@ public class Plyaer_2ControlScript : MonoBehaviour
         Mask_Video.transform.localScale = new Vector3(1, 1, 1);
         Instantiate(Bomb_Prefab, transform.position, Quaternion.identity);
         CGameManager.Instance.ResumeGame();
-      yield return new WaitForSeconds(0.3f);
-        _Animator.SetBool("Bomb",false); 
+
         hitbox.Show();
         keyLocked = false;
+        _Animator.SetBool("Bomb",false); 
     }
 
 

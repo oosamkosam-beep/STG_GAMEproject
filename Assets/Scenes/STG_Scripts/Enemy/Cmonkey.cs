@@ -7,8 +7,8 @@ public class Cmonkey : MonoBehaviour
 	Animator animator;
 	Vector3 prevPos;
 
-  [SerializeField] GameObject bulletPrefab_1;
-  [SerializeField] GameObject bulletPrefab_2;
+	[SerializeField] GameObject bulletPrefab_1;
+	[SerializeField] GameObject bulletPrefab_2;
 	[SerializeField] GameObject bulletPrefab_3;
 	[SerializeField] GameObject bulletPrefab_4;
 	[SerializeField] GameObject bulletPrefab_5;
@@ -20,7 +20,7 @@ public class Cmonkey : MonoBehaviour
 	float randomMoveDuration_Phase3 = 0.4f;
 	float randomMoveSpeed_Phase3 = 3.0f;
 
-	int phaseChangeHP = 1500;
+	int phaseChangeHP = 1200;
 	int phaseChangeSP = 0;
 	[Header("LP Gauge")]
 
@@ -189,10 +189,10 @@ public class Cmonkey : MonoBehaviour
 		    }
 	    }
 
-	    if (CUtility.IsOut(transform.position))
-	    {
-		Destroy(gameObject);
-	    }
+///	    if (CUtility.IsOut(transform.position))
+///	    {
+///		Destroy(gameObject);
+///	    }
 
 	    // ----- 移動量からアニメーション用パラメータ算出 -----
 	    Vector3 delta = transform.position - prevPos;
@@ -290,7 +290,7 @@ public class Cmonkey : MonoBehaviour
 		foreach (float offset in angleOffsets)
 		{
 			Vector3 shotPos = transform.position;
-			shotPos.y += -1.7f;
+			shotPos.y += 0f;
 			shotPos.z = BULLET_Z;
 
 			float angle = baseAngle + offset;
@@ -328,7 +328,7 @@ public class Cmonkey : MonoBehaviour
 		foreach (float offset in angleOffsets)
 		{
 			Vector3 shotPos = transform.position;
-			shotPos.y += -1.7f;
+			shotPos.y += 0f;
 			shotPos.z = BULLET_Z;
 
 			float angle = baseAngle + offset;
@@ -364,7 +364,7 @@ public class Cmonkey : MonoBehaviour
 		foreach (float offset in angleOffsets)
 		{
 			Vector3 shotPos = transform.position;
-			shotPos.y += -1.7f;
+			shotPos.y += 0f;
 			shotPos.z = BULLET_Z;
 
 			float angle = baseAngle + offset;
@@ -402,7 +402,7 @@ public class Cmonkey : MonoBehaviour
 		foreach (float offset in angleOffsets)
 		{
 			Vector3 shotPos = transform.position;
-			shotPos.y += -1.7f;
+			shotPos.y += 0f;
 			shotPos.z = BULLET_Z + 0.1f;
 
 			float angle = baseAngle + offset;
@@ -439,7 +439,7 @@ public class Cmonkey : MonoBehaviour
 		foreach (float offset in angleOffsets)
 		{
 			Vector3 shotPos = transform.position;
-			shotPos.y += -1.7f;
+			shotPos.y += 0f;
 			shotPos.z = BULLET_Z;
 
 			float angle = baseAngle + offset;
@@ -522,7 +522,7 @@ public class Cmonkey : MonoBehaviour
 			{
 				ShootLow3Way();
 
-				for (int f = 0; f < 120; f++) yield return null;//バースト間隔
+				for (int f = 0; f < 180; f++) yield return null;//バースト間隔
 			}
 
 			for (int f = 0; f < 90; f++) yield return null;
@@ -554,7 +554,7 @@ public class Cmonkey : MonoBehaviour
 			{
 
 				Vector3 shotPos = transform.position;
-				shotPos.y +=  -1.7f;
+				shotPos.y +=  -0f;
 				shotPos.z = BULLET_Z;
 
 				GameObject bullet = Instantiate(bulletPrefab_1, shotPos, Quaternion.identity);

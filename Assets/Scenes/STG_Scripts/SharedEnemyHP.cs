@@ -6,8 +6,8 @@ public class SharedEnemyHPData : ScriptableObject
     [SerializeField] GameObject lpGaugeRoot; // LPgaugeの親（Canvas配下など）
     [SerializeField] GameObject spGaugeRoot; 
 
-    public int maxHP = 3000;
-    public int maxSP = 1500;
+    public int maxHP = 2400;
+    public int maxSP = 1000;
     public int currentHP;
     public int currentSP;
 

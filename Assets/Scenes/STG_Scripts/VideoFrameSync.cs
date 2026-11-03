@@ -61,21 +61,19 @@ public class VideoFrameSync : MonoBehaviour
             spawned_2 = true;
             Debug.Log("video=1170");
         }
-        if (!spawned && videoPlayer.frame >= 4836)
-        {
-			GameObject unitA_Obj =
-				Instantiate(unitA_Prefab);
+		if (!spawned && videoPlayer.frame >= 4836)
+		{
+			GameObject unitA_Obj = Instantiate(unitA_Prefab);
+			RoadObject2D unitA1 = unitA_Obj.GetComponent<RoadObject2D>();
+			unitA1.SetRoadPosition(0.2f,4.85f);
 
-			RoadObject2D unitA =
-				unitA_Obj.GetComponent<RoadObject2D>();
+			GameObject unitB_Obj = Instantiate(unitB_Prefab);
+			RoadObject2D unitB = unitB_Obj.GetComponent<RoadObject2D>();
+			unitB.SetRoadPosition(-0.2f,4.85f);
 
-			unitA.SetRoadPosition(
-					0.2f,  // 左右
-					4.85f    // 奥
-					);
-            spawned = true;
-            Debug.Log("video=4836");
-        }
+			spawned = true;
+			Debug.Log("video=4836");
+		}
         if (!LoopTrigger && videoPlayer.frame >= 8589)
         {
             LoopTrigger = true;
