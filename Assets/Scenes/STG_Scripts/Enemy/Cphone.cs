@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Cphone : MonoBehaviour
 {
+    private RoadObject2D roadObject;
     [Header("弾")]
     [SerializeField] private GameObject bulletPrefab;
 
@@ -18,7 +19,6 @@ public class Cphone : MonoBehaviour
 
     private int Life = 60;
 	private const float BULLET_Z = 0f;
-    private RoadObject2D roadObject;
 
     private void Awake()
     {
@@ -28,7 +28,7 @@ public class Cphone : MonoBehaviour
     private void Start()
     {
         // 弾発射
-        StartCoroutine(Shot5Bullets());
+        StartCoroutine(ShotBullets());
     }
 
     private void Update()
@@ -44,10 +44,10 @@ public class Cphone : MonoBehaviour
         // 画面外へ出たら削除
         // ========================================
 
-       // if (CUtility.IsOut(transform.position))
-       // {
-       //     Destroy(gameObject);
-       // }
+        if (CUtility.IsOut(transform.position))
+        {
+            Destroy(gameObject);
+        }
     }
 
 //    void Update()
@@ -83,7 +83,7 @@ public class Cphone : MonoBehaviour
     // 弾発射
     // ============================================================
 
-    IEnumerator Shot5Bullets()
+    IEnumerator ShotBullets()
     {
         yield return new WaitForSeconds(2.0f);
 

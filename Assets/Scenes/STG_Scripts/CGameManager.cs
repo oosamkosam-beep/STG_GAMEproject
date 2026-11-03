@@ -111,7 +111,7 @@ public class CGameManager : MonoBehaviour
 		if (!spawn3 && GameTime >= 3.0)
 		{
 			GameObject enemyObj =
-				Instantiate(phone_Prefab);
+				Instantiate(Suit_Prefab);
 
 			RoadObject2D enemy =
 				enemyObj.GetComponent<RoadObject2D>();
