@@ -2,7 +2,7 @@ using UnityEngine;
 
 public static class GameData 
 {
-    public static bool Player = true;
+    public static bool Player = false;
 
     public static int Shield_stock = 2;
     public static int Bomb_stock = 3;

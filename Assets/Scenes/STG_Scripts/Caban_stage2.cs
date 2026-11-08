@@ -18,6 +18,7 @@ public class Caban_stage2 : MonoBehaviour
     IEnumerator aban()
     {
       Csounds.Instance.Play_abanBGM();
+      Csounds.Instance.Stop_bossBGM();
         yield return new WaitForSeconds(0.5f);
       animator.SetBool("S", true);
         yield return new WaitForSeconds(3.5f);

@@ -36,6 +36,10 @@ public class Csounds : MonoBehaviour
     {
         bossBGM.Play();
     }
+    public void Stop_bossBGM()
+    {
+        bossBGM.Stop();
+    }
 
     public void Play_abanBGM()
     {

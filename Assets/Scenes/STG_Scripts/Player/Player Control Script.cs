@@ -21,7 +21,7 @@ public class PlyaerControlScript : MonoBehaviour
     
     bool keyLocked = false; 
     bool Invincible = false;
-    Vector3 autoMoveTarget = new Vector3(0f, -2.5f, 1f);
+    Vector3 autoMoveTarget = new Vector3(0, -2.5f, 0);
     float autoMoveSpeed = 1.5f;
 
     float speed;

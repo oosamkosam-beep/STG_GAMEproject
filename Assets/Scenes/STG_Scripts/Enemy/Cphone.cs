@@ -50,39 +50,9 @@ public class Cphone : MonoBehaviour
         }
     }
 
-//    void Update()
-//    {
-//	    // ------- 移動 -------
-//	    // 消失点
-//	    Vector3 basePoint = new Vector3(0.06f, 12.7f, 5f);
-//
-//       // 基準点 → 敵 の方向
-//       Vector3 dir = transform.position - basePoint;
-//
-//       // 向きだけ取り出す
-//       dir = dir.normalized;
-//
-//       // 基準点から外へ離れる動き
-//       float speedMul = 1f;
-//       float cosTheta = Mathf.Abs(dir.y);
-//       if (cosTheta > 0.0001f)
-//       {
-//          speedMul = 1f / cosTheta;
-//       }
-//       transform.position += dir * radialSpeed * speedMul * Time.deltaTime;
-//
-//       if (CUtility.IsOut(transform.position))
-//       {
-//          Destroy(gameObject);
-//       }
-//    }
-
-
-
     // ============================================================
     // 弾発射
     // ============================================================
-
     IEnumerator ShotBullets()
     {
         yield return new WaitForSeconds(2.0f);
@@ -227,36 +197,28 @@ public class Cphone : MonoBehaviour
     private void DestroyEnemy()
     {
         GameData.score += 100;
-
         GameData.stage2_total_score += 100;
-
         GameData.stage2_destroy_score += 100;
-
 
         // --------------------------------------------
         // 撃破エフェクト
         // --------------------------------------------
-
         Instantiate(
             Destroy_Enemy_Prefab,
             transform.position,
             Quaternion.identity
         );
 
-
         // --------------------------------------------
         // Point Item
         // --------------------------------------------
-
         float baseAngle =
             -90f * Mathf.Deg2Rad;
-
 
         float[] angleOffsets =
         {
             180f * Mathf.Deg2Rad
         };
-
 
         foreach (float offset in angleOffsets)
         {
