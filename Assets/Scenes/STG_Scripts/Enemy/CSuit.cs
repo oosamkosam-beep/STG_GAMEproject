@@ -7,7 +7,7 @@ public class CSuit : MonoBehaviour
 	[SerializeField] GameObject bulletPrefab;
 	[SerializeField] GameObject hitodama_Prefab;
 	[SerializeField] GameObject Destroy_Enemy_Prefab;
-	int Life = 15;
+	int Life = 150;
 	const float BULLET_Z = 0f;
 
 	private float Speed = 1.0f; 

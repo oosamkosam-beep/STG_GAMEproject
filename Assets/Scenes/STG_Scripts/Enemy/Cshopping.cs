@@ -8,7 +8,7 @@ public class Cshopping : MonoBehaviour
   [SerializeField] GameObject pointitem_Prefab;
   [SerializeField] GameObject pointitem_homing_Prefab;
   [SerializeField] GameObject Destroy_Enemy_Prefab;
-  [SerializeField] int Life = 600;
+	int Life = 6000;
 
 	const float BULLET_Z = 0f;
 	Animator animator;

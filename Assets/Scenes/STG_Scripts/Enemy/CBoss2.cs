@@ -18,17 +18,17 @@ public class CBoss2 : MonoBehaviour
     public CSPGauge spGauge;
     public CtxtBox txtBox;
 
-    int maxHP = 3600;
+    int maxHP = 36000;
     int currentHP;
-    int maxSP1 = 3000;
-    int PhasechangeHP1 = 2400;
-    int PhasechangeHP2 = 1200;
+    int maxSP1 = 30000;
+    int PhasechangeHP1 = 24000;
+    int PhasechangeHP2 = 12000;
     int currentSP1;
-    int maxSP2 = 4000;
+    int maxSP2 = 40000;
     int currentSP2;
-    int maxSP3 = 6500;
+    int maxSP3 = 65000;
     int currentSP3;
-    int maxSP4 = 5000;
+    int maxSP4 = 50000;
     int currentSP4;
     
     bool Nomal_1, Nomal_2, Nomal_3; 
@@ -71,7 +71,7 @@ public class CBoss2 : MonoBehaviour
           yield return new WaitForSeconds(2f);
           StartCoroutine(ShoteyeNomal_1_Loop());
         }
-        if(!VideoSwitch1 && currentHP <= 3100 ) 
+        if(!VideoSwitch1 && currentHP <= 31000 ) 
         {
           VideoSwitch1 = true;
           VideoSwitcher.Instance.SwitchBoss2_1Video();
@@ -151,30 +151,30 @@ public class CBoss2 : MonoBehaviour
 
         if(currentHP <= 0) 
         {
-          if(!Psychedellc_Phase3 && currentSP3 <= 4500) 
+          if(!Psychedellc_Phase3 && currentSP3 <= 45000) 
           {
             Psychedellc_Phase3 = true;
             StartCoroutine(ShotPsychedelic_Phase3());
           }
-          if(!Psychedellc_Phase4 && currentSP3 <= 2300) 
+          if(!Psychedellc_Phase4 && currentSP3 <= 23000) 
           {
             Psychedellc_Phase4 = true;
             StartCoroutine(ShotPsychedelic_Phase4());
           }
-          if(!Psychedellc_Phase5 && currentSP3 <= 1200) 
+          if(!Psychedellc_Phase5 && currentSP3 <= 12000) 
           {
             Psychedellc_Phase5 = true;
             CFilterobject.Instance.SetColor(new Color(1f, 0.8f, 0.8f));
             StartCoroutine(ShotPsychedelic_Phase5());
           }
-          if(!Psychedellc_Phase6 && currentSP3 <= 250) 
+          if(!Psychedellc_Phase6 && currentSP3 <= 25000) 
           {
             Psychedellc_Phase6 = true;
             CFilterobject.Instance.SetColor(new Color(1f, 0.5f, 0.5f));
             CFilterobject.Instance.SetPostExposure(0.5f);
             StartCoroutine(ShotPsychedelic_Phase6());
           }
-          if(!Psychedellc_Phase7 && currentSP3 <= 200) 
+          if(!Psychedellc_Phase7 && currentSP3 <= 2000) 
           {
             Psychedellc_Phase7 = true;
             CFilterobject.Instance.SetColor(new Color(1f, 0f, 0f));

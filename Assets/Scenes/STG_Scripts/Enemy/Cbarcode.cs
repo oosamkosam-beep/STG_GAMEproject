@@ -7,7 +7,7 @@ public class Cbarcode : MonoBehaviour
     [SerializeField] GameObject pointitem_Prefab;
     [SerializeField] GameObject pointitem_homing_Prefab;
     [SerializeField] GameObject Destroy_Enemy_Prefab;
-    int Life = 70;
+    int Life = 700;
     const float BULLET_Z = 0f;
     Animator animator;
     

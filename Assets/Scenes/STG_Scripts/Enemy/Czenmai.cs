@@ -11,7 +11,7 @@ public class Czenmai : MonoBehaviour
 	[SerializeField] GameObject pointitem_Prefab;
 	[SerializeField] GameObject pointitem_homing_Prefab;
 	[SerializeField] GameObject Destroy_Enemy_Prefab;
-	int Life = 60;
+	int Life = 600;
 	const float BULLET_Z = 0f;
 
 	bool isMoving = true;   // true = 移動中 / false = 停止中

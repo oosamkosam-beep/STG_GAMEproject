@@ -20,7 +20,7 @@ public class Cmonkey : MonoBehaviour
 	float randomMoveDuration_Phase3 = 0.4f;
 	float randomMoveSpeed_Phase3 = 3.0f;
 
-	int phaseChangeHP = 1200;
+	int phaseChangeHP = 12000;
 	int phaseChangeSP = 0;
 	[Header("LP Gauge")]
 

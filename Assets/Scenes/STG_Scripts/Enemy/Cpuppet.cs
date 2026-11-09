@@ -6,7 +6,7 @@ public class Cpuppet : MonoBehaviour
   [SerializeField] GameObject bulletPrefab;
   [SerializeField] GameObject hitodama_Prefab;
   [SerializeField] GameObject Destroy_Enemy_Prefab;
-  int Life = 20;
+  int Life = 200;
   const float BULLET_Z = 0f;
   Animator animator;
 

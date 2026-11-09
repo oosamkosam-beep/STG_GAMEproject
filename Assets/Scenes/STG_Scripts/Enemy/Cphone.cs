@@ -17,7 +17,7 @@ public class Cphone : MonoBehaviour
     [Header("移動")]
     private float speed = 0.05f;
 
-    private int Life = 60;
+    private int Life = 600;
 	private const float BULLET_Z = 0f;
 
     private void Awake()
