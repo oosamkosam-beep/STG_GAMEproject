@@ -7,15 +7,9 @@ public class CGameManager : MonoBehaviour
 {
 	public static CGameManager Instance;
 
-	public GameObject Boss2_Prefab;
-
 	public bool isPhase2Started = false;
 	public bool isPhase3Started = false;
 	public bool isPhaseEndStarted = false;
-
-	[SerializeField] CLPGauge lpGauge;   
-	[SerializeField] CSPGauge spGauge;   
-	[SerializeField] CtxtBox txtBox;
 
 	// ===== 時間管理 =====
 	double gameTime = 0;
@@ -36,21 +30,6 @@ public class CGameManager : MonoBehaviour
 	{
 		Instance = this;
 	}
-	void Start()
-	{
-		if (lpGauge != null)
-		{
-			lpGauge.Hide();
-		}
-		if (spGauge != null)
-		{
-			spGauge.Hide();
-		}
-		if (txtBox != null)
-		{
-			txtBox.Hide();
-		}
-	}
 
 	void Update()
 	{
@@ -68,44 +47,19 @@ public class CGameManager : MonoBehaviour
 		}
 	}
 
-	public void EventTimeline()
-	{
-		StartEvent?.Invoke();
-	}
-
-	public void HandleBossTimeline()
-	{
-		if (!BossTrigger)
-		{
-			SetupBoss2(
-					Instantiate(Boss2_Prefab, new Vector3(0, 0, 0),Quaternion.identity));
-			EventEnd?.Invoke();
-		}
-	}
-
-	void OnEnable()
-	{
-		Cmonkey.OnMonkeyDestroyed += HandleMonkeyDestroyed;
-	}
-
-	void OnDisable()
-	{
-		Cmonkey.OnMonkeyDestroyed -= HandleMonkeyDestroyed;
-	}
-
-	void HandleMonkeyDestroyed(Cmonkey monkey)
+	public void MonkeyDestroyed()
 	{
 		phaseStartTime = GameTime;
 		phaseTime = 0;
 		OnPhaseStarted?.Invoke();//映像切り替え
 	}
-
-	void SetupBoss2(GameObject enemy)
+	public void EventTimeline()
 	{
-		var Boss2 = enemy.GetComponent<CBoss2>();
-		Boss2.lpGauge = lpGauge;
-		Boss2.spGauge = spGauge;
-		Boss2.txtBox = txtBox;
+		StartEvent?.Invoke();
+	}
+	public void EventEndTimeline()
+	{
+		EventEnd?.Invoke();
 	}
 
 	public void PauseGame()

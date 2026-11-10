@@ -88,7 +88,7 @@ public class CtxtBox : MonoBehaviour
                 inputLocked = true;
                 StartCoroutine(EndMessage());
                 Stage2_Event_Video.SetActive(false);
-                CGameManager.Instance.HandleBossTimeline();
+                CGameManager.Instance.EventEndTimeline();
                 NextMessage();
                 return;
             }
