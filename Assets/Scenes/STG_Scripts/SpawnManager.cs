@@ -199,7 +199,7 @@ public class SpawnManager : MonoBehaviour
 			SetupMonkey(enemyObj);
 			RoadObject2D enemy =
 				enemyObj.GetComponent<RoadObject2D>();
-			enemy.SetRoadPosition(1f, 5f);
+			enemy.SetRoadPosition(0.8f, 5f);
 			spawn96 = true;
 		}
 
@@ -210,7 +210,7 @@ public class SpawnManager : MonoBehaviour
 			SetupMonkey(enemyObj);
 			RoadObject2D enemy =
 				enemyObj.GetComponent<RoadObject2D>();
-			enemy.SetRoadPosition(-1f, 5f);
+			enemy.SetRoadPosition(-0.8f, 5f);
 			spawn98 = true;
 		}
         if (!LoopTrigger && gametime_frame >= 8589)
@@ -777,7 +777,7 @@ public class SpawnManager : MonoBehaviour
 	void HandleBossTimeline()
 	{
 		SetupBoss2(
-			Instantiate(Boss2_Prefab, new Vector3(0, 0, 0),Quaternion.identity));
+			Instantiate(Boss2_Prefab, new Vector3(0, 0, 5),Quaternion.identity));
 	}
 	void SetupBoss2(GameObject enemy)
 	{

@@ -222,7 +222,7 @@ public class Csuit_eyes : MonoBehaviour
         {
             Vector3 shotPos = transform.position;
             shotPos.y += 0.5f;
-            shotPos.z = BULLET_Z;
+            shotPos.z = BULLET_Z +0.05f;
 
             float angleRad = (baseAngle + offsetDeg) * Mathf.Deg2Rad;
 
@@ -261,7 +261,7 @@ public class Csuit_eyes : MonoBehaviour
         {
             Vector3 shotPos = transform.position;
             shotPos.y += 0.5f;
-            shotPos.z = BULLET_Z;
+            shotPos.z = BULLET_Z +0.05f;
 
             float angleRad = (baseAngle + offsetDeg) * Mathf.Deg2Rad;
 
@@ -300,7 +300,7 @@ public class Csuit_eyes : MonoBehaviour
             Vector3 shotPos = transform.position;
             shotPos.x += 0.2f;
             shotPos.y += 0.8f;
-            shotPos.z = BULLET_Z;
+            shotPos.z = BULLET_Z +0.05f;
 
             float angleRad = (baseAngle + offsetDeg) * Mathf.Deg2Rad;
 
@@ -338,7 +338,7 @@ public class Csuit_eyes : MonoBehaviour
             Vector3 shotPos = transform.position;
             shotPos.x -= 0.2f;
             shotPos.y += 0.8f;
-            shotPos.z = BULLET_Z;
+            shotPos.z = BULLET_Z +0.05f;
 
             float angleRad = (baseAngle + offsetDeg) * Mathf.Deg2Rad;
 
@@ -375,7 +375,7 @@ public class Csuit_eyes : MonoBehaviour
         {
             Vector3 shotPos = transform.position;
             shotPos.y += 0.5f;
-            shotPos.z = BULLET_Z;
+            shotPos.z = BULLET_Z +0.05f;
 
             float angleRad = (baseAngle + offsetDeg) * Mathf.Deg2Rad;
 
@@ -412,7 +412,7 @@ public class Csuit_eyes : MonoBehaviour
         {
             Vector3 shotPos = transform.position;
             shotPos.y += 0.5f;
-            shotPos.z = BULLET_Z;
+            shotPos.z = BULLET_Z +0.05f;
 
             float angleRad = (baseAngle + offsetDeg) * Mathf.Deg2Rad;
 

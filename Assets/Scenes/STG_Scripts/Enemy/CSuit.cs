@@ -10,7 +10,7 @@ public class CSuit : MonoBehaviour
 	int Life = 150;
 	const float BULLET_Z = 0f;
 
-	private float Speed = 1.0f; 
+	private float Speed = 0.5f; 
 
     private void Awake()
     {

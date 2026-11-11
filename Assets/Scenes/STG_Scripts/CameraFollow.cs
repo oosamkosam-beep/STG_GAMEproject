@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RatioCameraFollow : MonoBehaviour
+public class CameraFollow : MonoBehaviour
 {
     public Transform player_1;
     public Transform player_2;

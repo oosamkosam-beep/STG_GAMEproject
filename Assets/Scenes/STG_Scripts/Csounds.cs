@@ -18,9 +18,14 @@ public class Csounds : MonoBehaviour
 
     public void Play_Destroy_Enemy()
     {
+///      if(SE !=null)
+///      {
+///        SE.PlayOneShot(SE_Destroy_Enemy);
+///      }
       if(SE !=null)
       {
-        SE.PlayOneShot(SE_Destroy_Enemy);
+        SE.clip = SE_Destroy_Enemy;
+        SE.Play();
       }
     }
     public void Get_pointitem()
